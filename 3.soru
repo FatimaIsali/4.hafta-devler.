@@ -1,0 +1,29 @@
+using System;
+
+class Program
+{
+    public static int CalculateSum(int a, int b)
+    {
+        return a + b;
+    }
+    public static double CalculateSum(double a, double b)
+    {
+        return a + b;
+    }
+    public static int CalculateSum(int a, int b, int c)
+    {
+        return a + b + c;
+    }
+
+    static void Main(string[] args)
+    {
+        int sumInt = CalculateSum(5, 10);
+        Console.WriteLine("İki int sayının toplamı: " + sumInt);
+
+        double sumDouble = CalculateSum(3.5, 7.2);
+        Console.WriteLine("İki double sayının toplamı: " + sumDouble);
+
+        int sumThreeInts = CalculateSum(4, 6, 8);
+        Console.WriteLine("Üç int sayının toplamı: " + sumThreeInts);
+    }
+}
