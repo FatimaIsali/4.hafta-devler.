@@ -1,0 +1,30 @@
+using System;
+
+class Program
+{
+    
+    public static int SumGreaterThanFilter(int[] numbers, int filter)
+    {
+        int sum = 0;
+        foreach (int number in numbers)
+        {
+            if (number > filter)
+            {
+                sum += number; 
+            }
+        }
+
+        return sum;
+    }
+
+    static void Main(string[] args)
+    {
+       
+        int[] numbers = { 3, 15, 8, 6, 30, 4, 10 };
+
+        int filter = 7;
+
+        int result = SumGreaterThanFilter(numbers, filter);
+        Console.WriteLine($"Filtre değerinden ({filter}) büyük olan sayıların toplamı: {result}");
+    }
+}
