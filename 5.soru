@@ -1,0 +1,26 @@
+using System;
+
+class Program
+{
+    public static double CalculateAverage(params double[] numbers)
+    {
+        double sum = 0;
+        foreach (double number in numbers)
+        {
+            sum += number;
+        }
+        return sum / numbers.Length;
+    }
+
+    static void Main(string[] args)
+    {
+        Console.WriteLine("Sayıları girin ve Enter tuşuna basın (örneğin: 10 20 30 40): ");
+        
+        string input = Console.ReadLine();
+        string[] inputArray = input.Split(' '); // Sayıları boşluk ile ayırıyoruz
+        double[] numbers = Array.ConvertAll(inputArray, double.Parse);
+
+        double average = CalculateAverage(numbers);
+        Console.WriteLine("Ortalama: " + average);
+    }
+}
