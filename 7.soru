@@ -1,0 +1,21 @@
+using System;
+
+class Program
+{
+    public static int CalculateAgeDifference(int age = 18)
+  {
+        return age - 18;
+    }
+
+    static void Main(string[] args)
+    {
+        Console.Write("Yaşınızı girin (varsayılan 18): ");
+        string input = Console.ReadLine();
+
+        int age = string.IsNullOrEmpty(input) ? 18 : int.Parse(input);
+
+        int difference = CalculateAgeDifference(age);
+
+        Console.WriteLine($"18'den fazla olan kısmınız: {difference} yıl");
+    }
+}
