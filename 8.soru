@@ -1,0 +1,33 @@
+using System;
+using System.Collections.Generic;
+
+class Program
+{
+    public static List<string> FilterLongStrings(string[] words)
+    {
+        List<string> result = new List<string>();
+
+        foreach (string word in words)
+        {
+            if (word.Length > 5)
+            {
+                result.Add(word);
+            }
+        }
+
+        return result; // Filtrelenmiş listeyi döndürüyoruz
+    }
+
+    static void Main(string[] args)
+    {
+        string[] words = { "apple", "orange", "kiwi", "grape", "strawberry", "banana" };
+
+        List<string> filteredWords = FilterLongStrings(words);
+
+        Console.WriteLine("5'ten uzun kelimeler:");
+        foreach (string word in filteredWords)
+        {
+            Console.WriteLine(word);
+        }
+    }
+}
