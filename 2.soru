@@ -1,0 +1,26 @@
+using System;
+
+class Program
+{
+    public static int FindMaxValue(int[] numbers)
+    {
+        int max = numbers[0]; // İlk değeri varsayılan olarak en büyük kabul ediyoruz
+
+        foreach (int num in numbers)
+        {
+            if (num > max)
+            {
+                max = num; // Yeni bir daha büyük değer bulunduğunda max'ı güncelliyoruz
+            }
+        }
+        return max; // En büyük değeri döndürüyoruz
+    }
+    static void Main(string[] args)
+    {
+        int[] numbers = { 3, 56, 12, 78, 45, 90, 23 };
+
+        int maxValue = FindMaxValue(numbers);
+
+        Console.WriteLine("Dizideki en büyük değer: " + maxValue);
+    }
+}
