@@ -1,0 +1,24 @@
+using System;
+
+class Program
+{
+    
+    public static double CalculateTriangleArea(double baseLength, double height)
+    {
+        return (baseLength * height) / 2;
+    }
+
+    static void Main(string[] args)
+    {
+       
+        Console.Write("Üçgenin taban uzunluğunu girin: ");
+        double baseLength = Convert.ToDouble(Console.ReadLine());
+
+        Console.Write("Üçgenin yüksekliğini girin: ");
+        double height = Convert.ToDouble(Console.ReadLine());
+
+        double area = CalculateTriangleArea(baseLength, height);
+
+        Console.WriteLine("Üçgenin alanı: " + area);
+    }
+}
